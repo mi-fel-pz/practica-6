@@ -1,0 +1,73 @@
+:root {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  color: #172334;
+  background: #edf2f8;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+}
+
+.chat {
+  width: min(100%, 680px);
+  height: min(720px, calc(100dvh - 32px));
+  background: #fff;
+  border: 1px solid #d7e1ec;
+  border-radius: 20px;
+  box-shadow: 0 18px 55px #17385e18;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto auto;
+  overflow: hidden;
+}
+
+header, form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px clamp(12px, 4vw, 24px);
+}
+
+header { justify-content: space-between; border-bottom: 1px solid #e2e8f0; }
+h1 { margin: 0; font-size: clamp(1rem, 4vw, 1.4rem); }
+
+#messages {
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px clamp(12px, 4vw, 24px);
+}
+
+.message {
+  margin: 0;
+  padding: 10px 14px;
+  max-width: 85%;
+  border-radius: 14px;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+  line-height: 1.5;
+}
+
+.user { align-self: flex-end; background: #174aab; color: white; }
+.assistant { align-self: flex-start; background: #edf0f4; }
+#status { margin: 0 16px; color: #36495f; font-size: .9rem; }
+#status:empty { display: none; }
+
+input, button {
+  font: inherit;
+  padding: 10px 12px;
+  border-radius: 9px;
+}
+
+input { flex: 1; min-width: 0; border: 1px solid #8799ae; }
+button { border: 0; cursor: pointer; background: #174aab; color: white; }
+#reset { background: #eaf0f8; color: #153465; font-size: .85rem; }
+button:disabled { opacity: .55; cursor: default; }
+:focus-visible { outline: 2px solid #174aab; outline-offset: 3px; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
