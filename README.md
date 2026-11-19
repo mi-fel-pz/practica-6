@@ -24,3 +24,8 @@ Abre `ai-frontend/index.html` con doble clic o visita http://127.0.0.1:3000. Si 
 3. Pulsa «Nueva conversación» para borrar los mensajes y su contexto.
 
 El servidor expone `POST /api/chat`. Recibe `{ message, history }` y devuelve `{ reply }`. La Práctica 6 solicita un chat de texto, con los mensajes del usuario en azul a la derecha y los del agente en gris a la izquierda.
+
+
+## Actividad Agente BD
+
+La continuación con Sakila incluye la consigna de Teams, el código, las capturas y los entregables en [Agente-BD](Agente-BD/TAREA.md).

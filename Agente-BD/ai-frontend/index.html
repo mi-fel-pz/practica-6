@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agente BD · Sakila</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="chat" aria-labelledby="title">
+    <header>
+      <h1 id="title">Agente BD · Sakila</h1>
+      <button id="reset" type="button" disabled>Nueva conversación</button>
+    </header>
+    <div id="messages" role="log" aria-label="Mensajes"></div>
+    <p id="status" role="status"></p>
+    <form id="composer">
+      <label class="sr-only" for="message">Tu mensaje</label>
+      <input id="message" placeholder="Escribe tu mensaje…" maxlength="4000" autocomplete="off" required>
+      <button id="send" type="submit">Enviar</button>
+    </form>
+  </main>
+</body>
+</html>
